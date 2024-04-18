@@ -46,7 +46,7 @@ def main():
     display_partitions(partitions)
 
     # Ask user to choose partition(s)
-    partition_numbers = input("\nEnter the number(s) of the partition(s) to pull (separated by whitespace): ").split()
+    partition_numbers = input("\nEnter the number(s) of the partition(s) to pull (separated by space): ").split()
 
     for partition_number in partition_numbers:
         try:
