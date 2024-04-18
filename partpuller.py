@@ -21,7 +21,9 @@ def list_partitions():
                 partition_number = partition_number_match.group(1)
                 partitions[int(partition_number)] = partition_name
 
-    return partitions
+    # Sort partitions by number
+    sorted_partitions = {number: partitions[number] for number in sorted(partitions.keys())}
+    return sorted_partitions
 
 def display_partitions(partitions):
     column_width = max(len(name) for name in partitions.values()) + 5
